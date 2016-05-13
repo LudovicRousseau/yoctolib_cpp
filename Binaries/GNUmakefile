@@ -120,7 +120,7 @@ endif
 ifdef TOOLCHAIN_QARM
 OPTS_ARMEL = -I$(STAGING_QARM)/usr/include/ -O2 -mfloat-abi=soft -march=armv5 -marm -DBUILD_ARMEL
 else
-OPTS_ARMEL = -mfloat-abi=soft -march=armv5 -DBUILD_ARMEL
+OPTS_ARMEL = -mfloat-abi=hard -march=armv5 -DBUILD_ARMEL
 endif
 ifdef TOOLCHAIN_ARMHF
 # reduced ARMHF options to run properly on raspian-thing, but still be compatible with hard-floats VFP
